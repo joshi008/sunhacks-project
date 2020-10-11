@@ -45,7 +45,7 @@ const FeaturesTiles = ({
 
   const sectionHeader = {
     title: 'Build up the whole picture',
-    paragraph: 'We strongly believe every individual should have equal opportunity to learn and grow.'
+    paragraph: 'Removing hurdles in the way of learning.'
   };
 
   return (
@@ -93,10 +93,10 @@ const FeaturesTiles = ({
                 </div>
                 <div className="features-tiles-item-content">
                   <h4 className="mt-0 mb-8">
-                    I fork you
+                    Fork
                     </h4>
                   <p className="m-0 text-sm">
-                    You can fork any roadmap you want. Fork as many you want. Complete courses and 
+                    Fork a roadmap and make it your own. 
                     </p>
                 </div>
               </div>
@@ -118,7 +118,7 @@ const FeaturesTiles = ({
                     Robust Workflow
                     </h4>
                   <p className="m-0 text-sm">
-                    Fork project and start doing the course with a checklist of whatt is remaining.
+                    Fork project and start doing the course with a checklist of what is remaining.
                     </p>
                 </div>
               </div>
