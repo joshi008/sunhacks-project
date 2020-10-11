@@ -4,7 +4,11 @@
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.11.0",
+<<<<<<< HEAD
     "axios": "^0.20.0",
+=======
+    "@material-ui/icons": "^4.9.1",
+>>>>>>> b385ae5cb520e1453ae369a4eab7b9a1bdd3e553
     "classnames": "^2.2.6",
     "lodash": "^4.17.20",
     "node-sass": "^4.14.1",
@@ -12,6 +16,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-ga": "^2.7.0",
+    "react-icons": "^3.11.0",
     "react-router-dom": "^5.1.2",
     "react-scripts": "^3.4.3"
   },
