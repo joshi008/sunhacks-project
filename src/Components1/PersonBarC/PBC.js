@@ -24,7 +24,7 @@ import CircleUnchecked from "@material-ui/icons/RadioButtonUnchecked";
 import CheckCircleOutlineOutlinedIcon from "@material-ui/icons/CheckCircleOutlineOutlined";
 import Checkbox from "@material-ui/core/Checkbox";
 import "./person.css"
-const drawerWidth = 220;
+const drawerWidth = 230;
 
 const useStyles = makeStyles((theme) => ({
 	root: {
@@ -98,7 +98,7 @@ function ResponsiveDrawer(props, { data }) {
 
 			{/* <img src="https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" alt="Avatar" class={styles.avatar} /> */}
 			<div className={styles.div1}>
-				<h2
+				<h3
 					style={{
 						marginTop: "25%",
 						marginLeft: "5%",
@@ -106,7 +106,7 @@ function ResponsiveDrawer(props, { data }) {
 					}}
 				>
 					Hello User!
-				</h2>
+				</h3>
 				<div className={styles.container}>
 					<div className={styles.circle}>
 						<img src="https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" />
@@ -200,7 +200,7 @@ function ResponsiveDrawer(props, { data }) {
 					color: "#000"
 				}}
 			></hr>
-			<h2 style={{ marginLeft: "5%", color: "#000" }}>Keep Growing !!🐱‍🏍</h2>
+			<h3 style={{ marginLeft: "5%", color: "#000" }}>Keep Growing !!🐱‍🏍</h3>
 		</div>
 	);
 	const container =

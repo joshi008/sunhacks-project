@@ -23,7 +23,7 @@ import CallMergeIcon from "@material-ui/icons/CallMerge";
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        maxWidth: 290,
+        maxWidth: 285,
     },
     media: {
         height: 0,

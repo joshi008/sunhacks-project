@@ -20,6 +20,7 @@ import MailIcon from "@material-ui/icons/Mail";
 import ResponsiveDrawer from "../PersonBar/PersonBar2";
 import PersonIcon from "@material-ui/icons/Person";
 import AddCircleIcon from '@material-ui/icons/AddCircle';
+import { Avatar } from "@material-ui/core";
 const drawerWidth = 240;
 
 const useStyles = makeStyles((theme) => ({
@@ -185,7 +186,15 @@ export default function MiniDrawer() {
                     ) : (
                             <ListItem button key="Primary" onClick={profileBar}>
                                 <ListItemIcon>
-                                    <PersonIcon />
+                                    <Avatar
+
+                                        alt="Remy Sharp"
+                                        src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
+                                        className={classes.small}
+                                        style={{
+                                            marginLeft: "-10%",
+                                        }}
+                                    />
                                 </ListItemIcon>
                                 <ListItemText primary="Profile" />
                             </ListItem>

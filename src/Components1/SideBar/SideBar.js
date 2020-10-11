@@ -28,6 +28,7 @@ import ExitToAppIcon from "@material-ui/icons/ExitToApp";
 import PeopleIcon from "@material-ui/icons/People";
 import Link from "@material-ui/core/Link";
 import HomeIcon from "@material-ui/icons/Home";
+import { Avatar } from "@material-ui/core";
 const drawerWidth = 240;
 
 const useStyles = makeStyles((theme) => ({
@@ -214,14 +215,14 @@ export default function MiniDrawer() {
 							<ListItemIcon>
 								<HomeIcon />
 							</ListItemIcon>
-							<ListItemText primary="Dashboard" />
+							<ListItemText primary="Dashboard" style={{ color: "#000" }} />
 						</ListItem>
 					</Link>
 					<ListItem button key="Roadmap">
 						<ListItemIcon>
 							<AddIcon onClick={handleCourseOpen} />
 						</ListItemIcon>
-						<ListItemText primary="Add Roadmap" />
+						<ListItemText primary="Add Roadmap" style={{ color: "#000" }} />
 					</ListItem>
 					<Link
 						href="/users"
@@ -234,7 +235,7 @@ export default function MiniDrawer() {
 							<ListItemIcon>
 								<PeopleIcon />
 							</ListItemIcon>
-							<ListItemText primary="Users" />
+							<ListItemText primary="Users" style={{ color: "#000" }} />
 						</ListItem>
 					</Link>
 
@@ -243,16 +244,25 @@ export default function MiniDrawer() {
 					) : (
 							<ListItem button key="Primary">
 								<ListItemIcon>
-									<PersonIcon onClick={profileBar} />
+									<Avatar
+										onClick={profileBar}
+										alt="Remy Sharp"
+										src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
+										className={classes.small}
+										style={{
+											marginLeft: "-10%",
+										}}
+									/>
+
 								</ListItemIcon>
-								<ListItemText primary="Profile" />
+								<ListItemText primary="Profile" style={{ color: "#000" }} />
 							</ListItem>
 						)}
 					<ListItem button key="Logout">
 						<ListItemIcon>
 							<ExitToAppIcon />
 						</ListItemIcon>
-						<ListItemText primary="Logout" />
+						<ListItemText primary="Logout" style={{ color: "#000" }} />
 					</ListItem>
 				</List>
 				<Modal

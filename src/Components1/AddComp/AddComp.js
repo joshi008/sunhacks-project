@@ -193,7 +193,7 @@ class AddComp extends React.Component {
 		let { courses } = this.state;
 		return (
 			<div>
-				<h1 style={{ marginRight: "50%", whiteSpace: "nowrap" }}>
+				<h1 style={{ marginRight: "50%", whiteSpace: "nowrap", color: "#000" }}>
 					Add a Roadmap
 				</h1>
 				<div className="add-app">
