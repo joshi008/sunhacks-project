@@ -1,8 +1,9 @@
 import React from "react";
-import { makeStyles, withStyles } from "@material-ui/core/styles";
+import { makeStyles } from "@material-ui/core/styles";
 import clsx from "clsx";
 import Card from "@material-ui/core/Card";
 import CardHeader from "@material-ui/core/CardHeader";
+import CardMedia from "@material-ui/core/CardMedia";
 import CardContent from "@material-ui/core/CardContent";
 import CardActions from "@material-ui/core/CardActions";
 import Collapse from "@material-ui/core/Collapse";
@@ -14,177 +15,104 @@ import FavoriteIcon from "@material-ui/icons/Favorite";
 import ShareIcon from "@material-ui/icons/Share";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import MoreVertIcon from "@material-ui/icons/MoreVert";
-import PropTypes from "prop-types";
-import LinearProgress from "@material-ui/core/LinearProgress";
-import Box from "@material-ui/core/Box";
-import StarIcon from "@material-ui/icons/Star";
+import FilterVintageIcon from "@material-ui/icons/FilterVintage";
+import OpenInNewIcon from "@material-ui/icons/OpenInNew";
+import EmojiEventsIcon from "@material-ui/icons/EmojiEvents";
+import Badge from "@material-ui/core/Badge";
 import CallMergeIcon from "@material-ui/icons/CallMerge";
-import Chip from "@material-ui/core/Chip";
-import ScheduleIcon from "@material-ui/icons/Schedule";
-
-
-const BorderLinearProgress = withStyles((theme) => ({
-    root: {
-        height: 0,
-        borderRadius: 5,
-        paddingTop: "2%",
-    },
-    colorPrimary: {
-        backgroundColor: "#DFDFDF",
-    },
-    bar: {
-        borderRadius: 5,
-        backgroundColor: (props) => props.color,
-        padding: "2%",
-    },
-}))(LinearProgress);
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        minWidth: 270,
-        margin: "2%",
-        borderRadius: "7%",
-    },
-    root: {
-        display: 'flex',
-        '& > *': {
-            margin: theme.spacing(1),
-        },
-    },
-    small: {
-        width: theme.spacing(3),
-        height: theme.spacing(3),
-    },
-    large: {
-        width: theme.spacing(7),
-        height: theme.spacing(7),
-    },
-    root1: {
-        display: "flex",
-        "& > *": {
-            margin: theme.spacing(1),
-        },
-    },
-    small: {
-        width: theme.spacing(3),
-        height: theme.spacing(3),
-    },
-    large: {
-        width: theme.spacing(9),
-        height: theme.spacing(9),
+        maxWidth: 345
     },
     media: {
         height: 0,
-        paddingTop: "56.25%", // 16:9
+        paddingTop: "56.25%" // 16:9
     },
     expand: {
         transform: "rotate(0deg)",
         marginLeft: "auto",
         transition: theme.transitions.create("transform", {
-            duration: theme.transitions.duration.shortest,
-        }),
+            duration: theme.transitions.duration.shortest
+        })
     },
     expandOpen: {
-        transform: "rotate(180deg)",
+        transform: "rotate(180deg)"
     },
     avatar: {
-        backgroundColor: red[500],
+        backgroundColor: red[500]
     },
-    progress: {
-        width: "100%",
-    },
+    large: {
+        width: theme.spacing(7),
+        height: theme.spacing(7)
+    }
 }));
 
 export default function RecipeReviewCard() {
     const classes = useStyles();
+    const [expanded, setExpanded] = React.useState(false);
 
-    const normalise = (value) => value / 10;
+    const handleExpandClick = () => {
+        setExpanded(!expanded);
+    };
+
     return (
         <Card className={classes.root}>
             <CardHeader
-                action={
-                    <IconButton aria-label="settings">
-                        <MoreVertIcon style={{ color: "#E0DFE4" }} />
-                    </IconButton>
+                avatar={
+                    <Avatar
+                        alt="Remy Sharp"
+                        src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
+                        className={classes.large}
+                    />
                 }
-                disableTypography={true}
-                title="React"
-                style={{
-                    marginLeft: "30%",
-                    fontSize: "3vh",
-                    fontWeight: "bold",
-                }}
+                title="Andrew Singh"
+                subheader="Developer"
             />
-            <p
-                style={{
-                    fontSize: "2vh",
-                    color: "#A7A4A3",
-                    marginLeft: "25%",
-                    marginTop: "-5%",
-                }}
-            >
-                Creator name aayega
-			</p>
-            <div
-                style={{
-                    marginTop: "10%",
-                    display: "flex",
-                    flexDirection: "row",
-                    justifyContent: "space-between",
-                }}
-            >
-                <p
-                    style={{
-                        fontWeight: "bold",
-                        color: "#000",
-                        marginLeft: "5%",
-                    }}
-                >
-                    Progress
-				</p>
-                <p
-                    style={{
-                        fontWeight: "bold",
-                        color: "#000",
-                        marginRight: "5%",
-                    }}
-                >
-                    45%
-				</p>
-            </div>
-            <BorderLinearProgress
-                variant="determinate"
-                value={normalise(500)}
-                color="#03E565"
-                style={{
-                    backgroundColor: "#DFDFDF",
-                    marginLeft: "5%",
-                    marginRight: "5%",
-                }}
-            />
-            {/* <CardContent>
-				<Typography variant="body2" color="textSecondary" component="p">
-					This impressive paella is a perfect party dish and a fun
-					meal to cook together with your guests. Add 1 cup of frozen
-					peas along with the mussels, if you like.
-				</Typography>
-			</CardContent> */}
+
+            <CardContent>
+                <Typography variant="body2" color="textSecondary" component="p">
+                    I am delighted to be in this platform. Fork and share knowledge as
+                    much as you want.
+        </Typography>
+            </CardContent>
             <CardActions disableSpacing>
-                <IconButton aria-label="add to favorites">
-                    <StarIcon />
+                <Badge badgeContent={4} color="error">
+                    <FavoriteIcon />
+                </Badge>
+
+                <IconButton aria-label="open-new">
+                    <a href="#">
+                        <OpenInNewIcon />
+                    </a>
                 </IconButton>
-                <IconButton aria-label="share">
+                {/* <IconButton
+          className={clsx(classes.expand, {
+            [classes.expandOpen]: expanded
+          })}
+          onClick={handleExpandClick}
+          aria-expanded={expanded}
+          aria-label="show more"
+        >
+          <ExpandMoreIcon />
+        </IconButton> */}
+
+                <Badge badgeContent={20} color="error">
                     <CallMergeIcon />
-                </IconButton>
-                <Chip
-                    size="small"
-                    avatar={<ScheduleIcon />}
-                    label="X courses left"
-                    style={{
-                        marginRight: "2%",
-                    }}
-                />
+                </Badge>
             </CardActions>
+            {/* <Collapse in={expanded} timeout="auto" unmountOnExit>
+        <CardContent>
+          <Typography paragraph>
+            <h2>Details:</h2>
+          </Typography>
+          <Typography paragraph>
+            Contributions: <FilterVintageIcon />
+            20
+            <FilterVintageIcon />
+          </Typography>
+        </CardContent>
+      </Collapse> */}
         </Card>
     );
 }

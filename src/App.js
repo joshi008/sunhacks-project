@@ -16,8 +16,9 @@ import Dash from "./Screens/Dasboard/Dash";
 
 import AddCourse from "./Screens/AddCourse/AddCourse";
 import UserList from './Components1/UserList/UserList';
-
-
+import ResponsiveDrawer from "./Components1/SideBar/SideBar";
+import { BrowserRouter, Route } from "react-router-dom";
+import Course from "./Components1/SideBarC/SideBarC";
 // Initialize Google Analytics
 ReactGA.initialize(process.env.REACT_APP_GA_CODE);
 
@@ -49,8 +50,12 @@ const App = () => {
           <AppRoute exact path="/" component={Home} layout={LayoutDefault} />
           <AppRoute exact path="/login" component={Login} />
           <AppRoute exact path="/signup" component={Signup} />
-          <AppRoute exact path="/dashboard" component={Dash} />
+          <Route
+            path="/dashboard"
+            render={(props) => <Dash page={<ResponsiveDrawer />} />}
+          />
           <AppRoute exact path="/addcourse" component={AddCourse} />
+          <AppRoute exact path="/course" component={Course} />
           <AppRoute exact path="/allusers" component={UserList} />
 
         </Switch>
