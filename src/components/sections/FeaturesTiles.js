@@ -74,7 +74,7 @@ const FeaturesTiles = ({
                     Stars
                     </h4>
                   <p className="m-0 text-sm">
-                    Star projects as much as you want. Spread love and happiness to contributor.
+                    Star as many projects as you want. Show some love to the contributor.
                     </p>
                 </div>
               </div>
@@ -96,7 +96,7 @@ const FeaturesTiles = ({
                     I fork you
                     </h4>
                   <p className="m-0 text-sm">
-                    You can fork any roadmap you want. Fork as much you want. Complete course, learn and grow.
+                    You can fork any roadmap you want. Fork as many you want. Complete courses and 
                     </p>
                 </div>
               </div>
