@@ -50,8 +50,8 @@ const FeaturesSplit = ({
   );
 
   const sectionHeader = {
-    title: 'By, For and To  the people',
-    paragraph: 'A community driven platform where every open source resource could be found in a structured and useful manner.'
+    title: 'What is The Minerva Project?',
+    paragraph: 'A community driven platform where you can find roadmaps to learn anything. Be it AI or Interior Design, you name it ,we got it. '
   };
 
   return (
@@ -73,7 +73,7 @@ const FeaturesSplit = ({
                   Community-driven insights
                   </h3>
                 <p className="m-0">
-                  People who have excelled in their fields have combined together a set of resources to help the society to learn and grow.
+                  The community compiles a set of resources to help each other learn and grow.
                   </p>
               </div>
               <div className={
@@ -93,13 +93,13 @@ const FeaturesSplit = ({
             <div className="split-item">
               <div className="split-item-content center-content-mobile reveal-from-right" data-reveal-container=".split-item">
                 <div className="text-xxs text-color-primary fw-600 tt-u mb-8">
-                  Add course at light speed
+                  Add courses effortlessly
                   </div>
                 <h3 className="mt-0 mb-12">
-                  Usefullness
+                  Usefulness
                   </h3>
                 <p className="m-0">
-                  People add a todo list for completion of a project or wanted to learn a new skill. All things are available in the market but the right guidance is needed.
+                  Need to learn a new skill? Fork community inspired plans.
                   </p>
               </div>
               <div className={
