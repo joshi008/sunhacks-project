@@ -16,13 +16,14 @@ import ListItemText from "@material-ui/core/ListItemText";
 import MailIcon from "@material-ui/icons/Mail";
 import MenuIcon from "@material-ui/icons/Menu";
 import Typography from "@material-ui/core/Typography";
-import { makeStyles, useTheme } from "@material-ui/core/styles";
+import { makeStyles, useTheme, withTheme } from "@material-ui/core/styles";
 import PersonIcon from "@material-ui/icons/Person";
 import styles from "./PBC.module.css";
 import Card from "../CourseCard/CourseC";
 import CircleUnchecked from "@material-ui/icons/RadioButtonUnchecked";
 import CheckCircleOutlineOutlinedIcon from "@material-ui/icons/CheckCircleOutlineOutlined";
 import Checkbox from "@material-ui/core/Checkbox";
+import "./person.css"
 const drawerWidth = 220;
 
 const useStyles = makeStyles((theme) => ({
@@ -31,6 +32,8 @@ const useStyles = makeStyles((theme) => ({
 		border: "none",
 	},
 	drawer: {
+		color: "#000",
+		backgroundColor: "#F7F8FB",
 		[theme.breakpoints.up("sm")]: {
 			width: drawerWidth,
 			flexShrink: 0,
@@ -99,6 +102,7 @@ function ResponsiveDrawer(props, { data }) {
 					style={{
 						marginTop: "25%",
 						marginLeft: "5%",
+						color: "#000"
 					}}
 				>
 					Hello User!
@@ -118,6 +122,7 @@ function ResponsiveDrawer(props, { data }) {
 					border: 0,
 					height: "2px",
 					borderTop: "1px solid #F6F7F8",
+					color: "#000"
 				}}
 			></hr>
 			<div>
@@ -126,6 +131,7 @@ function ResponsiveDrawer(props, { data }) {
 						display: "flex",
 						flexDirection: "column",
 						marginLeft: "5%",
+						color: "#000"
 					}}
 				>
 					<p style={{ color: "#C6C6C6", fontSize: "2vh" }}>
@@ -191,9 +197,10 @@ function ResponsiveDrawer(props, { data }) {
 					border: 0,
 					height: "2px",
 					borderTop: "1px solid #F6F7F8",
+					color: "#000"
 				}}
 			></hr>
-			<h2 style={{ marginLeft: "5%" }}>Keep Growing !!🐱‍🏍</h2>
+			<h2 style={{ marginLeft: "5%", color: "#000" }}>Keep Growing !!🐱‍🏍</h2>
 		</div>
 	);
 	const container =

@@ -19,6 +19,7 @@ import UserList from './Components1/UserList/UserList';
 import ResponsiveDrawer from "./Components1/SideBar/SideBar";
 import { BrowserRouter, Route } from "react-router-dom";
 import Course from "./Components1/SideBarC/SideBarC";
+import Users from "./Screens/Users/Users";
 // Initialize Google Analytics
 ReactGA.initialize(process.env.REACT_APP_GA_CODE);
 
@@ -57,7 +58,7 @@ const App = () => {
           <AppRoute exact path="/addcourse" component={AddCourse} />
           <AppRoute exact path="/course" component={Course} />
           <AppRoute exact path="/allusers" component={UserList} />
-
+          <Route path="/users" render={(props) => <Users />} />
         </Switch>
       )} />
 

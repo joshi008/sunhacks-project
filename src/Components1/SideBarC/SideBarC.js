@@ -25,8 +25,11 @@ import PersonIcon from "@material-ui/icons/Person";
 import AddIcon from "@material-ui/icons/Add";
 import AddComp from "../AddComp/AddComp";
 import ExitToAppIcon from "@material-ui/icons/ExitToApp";
+import Link from "@material-ui/core/Link";
+import HomeIcon from "@material-ui/icons/Home";
 import PeopleIcon from "@material-ui/icons/People";
 const drawerWidth = 240;
+
 
 const useStyles = makeStyles((theme) => ({
 	root: {
@@ -193,37 +196,59 @@ export default function MiniDrawer() {
 						{theme.direction === "rtl" ? (
 							<ChevronRightIcon />
 						) : (
-							<ChevronLeftIcon />
-						)}
+								<ChevronLeftIcon />
+							)}
 					</IconButton>
 				</div>
 				<List
 					onMouseEnter={handleDrawerOpen}
 					onMouseLeave={handleDrawerClose}
 				>
+					<Link
+						href="/dashboard"
+						style={{
+							textDecoration: "none",
+							cursor: "pointer",
+						}}
+					>
+						<ListItem button key="Dashboard">
+							<ListItemIcon>
+								<HomeIcon />
+							</ListItemIcon>
+							<ListItemText primary="Dashboard" />
+						</ListItem>
+					</Link>
 					<ListItem button key="Roadmap">
 						<ListItemIcon>
 							<AddIcon onClick={handleCourseOpen} />
 						</ListItemIcon>
 						<ListItemText primary="Add Roadmap" />
 					</ListItem>
-					<ListItem button key="Users">
-						<ListItemIcon>
-							<PeopleIcon />
-						</ListItemIcon>
-						<ListItemText primary="Users" />
-					</ListItem>
+					<Link
+						href="/users"
+						style={{
+							textDecoration: "none",
+							cursor: "pointer",
+						}}
+					>
+						<ListItem button key="Users">
+							<ListItemIcon>
+								<PeopleIcon />
+							</ListItemIcon>
+							<ListItemText primary="Users" />
+						</ListItem>
+					</Link>
 
 					{isMobile ? (
 						console.log("LOl")
 					) : (
-						<ListItem button key="Primary">
-							<ListItemIcon>
-								<PersonIcon onClick={profileBar} />
-							</ListItemIcon>
-							<ListItemText primary="Profile" />
-						</ListItem>
-					)}
+							<ListItem button key="Primary">
+								<ListItemIcon>
+									<PersonIcon onClick={profileBar} />
+								</ListItemIcon>
+								<ListItemText primary="Profile" />
+							</ListItem>
+						)}
 					<ListItem button key="Logout">
 						<ListItemIcon>
 							<ExitToAppIcon />

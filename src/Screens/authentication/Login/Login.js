@@ -15,6 +15,8 @@ import Container from "@material-ui/core/Container";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import FacebookIcon from "@material-ui/icons/Facebook";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
+import axios from "axios
+
 function Copyright() {
 	return (
 		<Typography variant="body2" color="textSecondary" align="center">
